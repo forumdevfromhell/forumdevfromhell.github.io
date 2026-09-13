@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Forum Dev From Hell — building forums with everything except forum software.">
+  <meta name="theme-color" content="#000000">
+  <title>FORUM DEV FROM HELL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <main class="terminal" id="top">
+    <header class="masthead">
+      <div class="brand" aria-label="Forum Dev From Hell">
+        <span>FORUM</span><span>DEV</span><span>FROM</span><span>HELL</span>
+      </div>
+      <div class="uptime"><span id="repoCount">---</span> atrocities</div>
+    </header>
+
+    <section class="menu" aria-label="Main menu">
+      <a href="#about"><b>(A)</b> About This Mistake</a>
+      <a href="#projects"><b>(P)</b> Project Showcase</a>
+      <a href="#manifesto"><b>(M)</b> Manifesto</a>
+      <a href="#quotes"><b>(Q)</b> Questionable Wisdom</a>
+      <a href="https://github.com/forumdevfromhell" target="_blank" rel="noreferrer"><b>(G)</b> GitHub</a>
+      <button type="button" data-command="random"><b>(R)</b> Random Atrocity</button>
+      <button type="button" data-command="help"><b>(H)</b> Help</button>
+      <a href="#footer"><b>(X)</b> Exit BBS</a>
+    </section>
+
+    <section class="hero panel">
+      <p class="eyebrow">CONNECTED TO FORUMDEVFROMHELL.GITHUB.IO</p>
+      <h1>Building forums with everything except forum software.</h1>
+      <blockquote>“why the fuck did you make this”<small>first reaction to Folderum 3</small></blockquote>
+    </section>
+
+    <section id="about" class="panel">
+      <h2><span>(A)</span> WHY AM I DOING THIS FORUM NONSENSE</h2>
+      <p class="bigcopy">People say they know the Earth is round because they saw pictures of Earth. I think the Earth is round because I’ve tried to prove it’s flat in as many ways as possible, intentionally failing at doing so.</p>
+      <p>Normal software architecture is perfect the way it is. I just think people nowadays build software for a purpose. Where’s the fun?</p>
+      <p class="identity"><strong>IDENTITY:</strong> anonymous hobby developer. “Forum dev from hell” happened more or less by accident.</p>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2><span>(P)</span> CURRENT ATROCITIES</h2>
+      <div class="statusline" id="repoStatus">Fetching current atrocities from GitHub<span class="blink">_</span></div>
+      <div class="projects" id="projectsGrid" aria-live="polite"></div>
+      <noscript><p>JavaScript is disabled. The GitHub feed cannot commit crimes without it.</p></noscript>
+    </section>
+
+    <section id="manifesto" class="panel split">
+      <div>
+        <h2><span>(M)</span> GOOD SOFTWARE</h2>
+        <p>Good software should be fun to make for the dev, fun to use for the user and fun to display. It doesn’t have to make sense.</p>
+      </div>
+      <div>
+        <h2><span>(C)</span> CURSED SOFTWARE</h2>
+        <p>Cursed software is software that’s too strict. Something I yell “fuck you!!!” at at three in the morning because it doesn’t let me go out of the box.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2><span>(F)</span> FAVORED CHILDREN</h2>
+      <div class="favgrid">
+        <article>
+          <h3>FTForum</h3>
+          <p>My long term problem child. Easy to set up, easy to understand, easy to maintain. A nerd’s dream, and my beloved.</p>
+        </article>
+        <article>
+          <h3>Folderum 3</h3>
+          <p>I managed to prove something that no fucking person asked to be proven. The desired reaction was pure confusion.</p>
+        </article>
+        <article>
+          <h3>TScum</h3>
+          <p>Spite driven development. You do not have to build something to shill. Sometimes you build it because you want to.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="quotes" class="panel">
+      <h2><span>(Q)</span> QUESTIONABLE WISDOM</h2>
+      <div class="quotes">
+        <blockquote>“I like offending people, because I think people who get offended should be offended.”<small>Linus Torvalds</small></blockquote>
+        <blockquote>“Playfully doing something difficult, whether useful or not, that is hacking.”<small>Richard M. Stallman</small></blockquote>
+        <blockquote>“If it builds, it’s a bug. If it fails to compile, the data is safe.”<small>Forum Dev From Hell</small></blockquote>
+        <blockquote>“If it works, then you can always add a fun twist to it!”<small>Forum Dev From Hell</small></blockquote>
+      </div>
+    </section>
+
+    <section class="command-panel panel" aria-label="Command prompt">
+      <div id="commandOutput">Type HELP for commands.</div>
+      <form id="commandForm" autocomplete="off">
+        <label for="commandInput">Command -&gt;</label>
+        <input id="commandInput" name="command" spellcheck="false" autocomplete="off" maxlength="80">
+        <span class="blink">_</span>
+      </form>
+    </section>
+
+    <footer id="footer">
+      <span>forumdevfromhell.github.io</span>
+      <span id="clock">Connected: 00:00:00</span>
+      <span>CMD-H for menu</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
