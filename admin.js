@@ -66,7 +66,7 @@
   function parsePosts(source) {
     const match = source.match(/window\.FDH_BLOG_POSTS\s*=\s*(\[[\s\S]*\])\s*;?\s*$/);
     if (!match) throw new Error('Could not parse blog-data.js');
-    return JSON.parse(match[1]);
+    return Function("return (" + match[1] + ")")();
   }
 
   function slugify(text) {
