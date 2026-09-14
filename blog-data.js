@@ -41,5 +41,18 @@ window.FDH_BLOG_POSTS = [
     "body": [
       "Pushed data into compiler errors on purpose, looks like this might work to store data on purpose.\nwill investigate further"
     ]
+  },
+  {
+    "id": "turning-typescript-into-storage",
+    "title": "Turning typescript into storage",
+    "date": "2026-09-14",
+    "readTime": "1 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "managed another feat",
+    "body": [
+      "users become interfaces, passwords literal types, threads namespaces, relationships imports."
+    ]
   }
 ];
