@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>BLOG ARCHIVE // FORUM DEV FROM HELL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <main class="terminal">
+    <header class="masthead">
+      <div class="brand"><span>BLOG</span><span>ARCH</span><span>IVE</span><span>BBS</span></div>
+      <div class="uptime">all transmissions</div>
+    </header>
+    <section class="blog-shell">
+      <a class="backlink" href="index.html">&lt;- RETURN TO MAIN BOARD</a>
+      <h1>Transmission Archive</h1>
+      <p class="bigcopy">Every blog entry, newest first.</p>
+      <div class="statusline" id="archiveStatus">Reading archive<span class="blink">_</span></div>
+      <div class="projects" id="archiveGrid"></div>
+    </section>
+    <footer><span>forumdevfromhell.github.io</span><span>BLOG ARCHIVE</span><span>ESC TO MAIN BOARD</span></footer>
+  </main>
+  <script src="blog-data.js"></script>
+  <script>
+    (() => {
+      const esc = s => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+      const posts = Array.isArray(window.FDH_BLOG_POSTS) ? [...window.FDH_BLOG_POSTS] : [];
+      posts.sort((a,b) => new Date(b.date)-new Date(a.date));
+      const grid = document.querySelector('#archiveGrid');
+      document.querySelector('#archiveStatus').textContent = `${posts.length} transmission${posts.length === 1 ? '' : 's'} archived.`;
+      grid.innerHTML = posts.map(post => `<a class="project-card blog-card" href="post.html?id=${encodeURIComponent(post.id)}"><div class="code">[${esc((post.tags||['BLOG']).join(' / ').toUpperCase())}]</div><h3>${esc(post.title)}</h3><p>${esc(post.summary||'')}</p><div class="meta"><span>${esc(post.date||'UNKNOWN DATE')}</span><span>${esc(post.readTime||'??? MIN READ')}</span></div></a>`).join('');
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') location.href='index.html'; });
+    })();
+  </script>
+</body>
+</html>

@@ -9,6 +9,8 @@
   const cmdOutput = document.querySelector('#commandOutput');
   const started = Date.now();
   let repos = [];
+  const blogPreview = document.querySelector('#blogPreview');
+  const blogStatus = document.querySelector('#blogStatus');
 
   const special = [
     [/folderum.?3/i, 'PROOF NOBODY REQUESTED'],
@@ -64,12 +66,42 @@
     }
   }
 
+
+  function blogCard(post) {
+    const tags = Array.isArray(post.tags) ? post.tags.join(' / ') : 'BLOG';
+    return `<a class="project-card blog-card" href="post.html?id=${encodeURIComponent(post.id)}">
+      <div class="code">[${esc(tags.toUpperCase())}]</div>
+      <h3>${esc(post.title)}</h3>
+      <p>${esc(post.summary || '')}</p>
+      <div class="meta">
+        <span>${esc(post.date || 'UNKNOWN DATE')}</span>
+        <span>${esc(post.readTime || '??? MIN READ')}</span>
+      </div>
+    </a>`;
+  }
+
+  function loadBlogPreview() {
+    const posts = Array.isArray(window.FDH_BLOG_POSTS) ? [...window.FDH_BLOG_POSTS] : [];
+    posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+    const latest = posts.slice(0, 2);
+    if (!blogPreview || !blogStatus) return;
+    if (!latest.length) {
+      blogStatus.textContent = 'No transmissions yet.';
+      blogPreview.innerHTML = '';
+      return;
+    }
+    blogPreview.innerHTML = latest.map(blogCard).join('');
+    blogStatus.textContent = `Showing the ${latest.length} newest transmission${latest.length === 1 ? '' : 's'}. Older entries remain in the archive.`;
+  }
+
   const commands = {
-    HELP: () => 'ABOUT  PROJECTS  QUOTES  RANDOM  GITHUB  TOP  CLEAR',
+    HELP: () => 'ABOUT  PROJECTS  BLOG  QUOTES  RANDOM  GITHUB  SYSOP  TOP  CLEAR',
     ABOUT: () => (location.hash = '#about', 'Opening manifesto...'),
     PROJECTS: () => (location.hash = '#projects', `${repos.length || '???'} atrocities currently indexed.`),
+    BLOG: () => (location.hash = '#blog', 'Opening latest transmissions...'),
     QUOTES: () => (location.hash = '#quotes', 'Loading questionable wisdom...'),
     GITHUB: () => (window.open(`https://github.com/${GH_USER}`, '_blank', 'noopener'), 'Opening GitHub...'),
+    SYSOP: () => (location.href = 'admin.html', 'Opening SysOp console...'),
     TOP: () => (location.hash = '#top', 'Returning to main menu...'),
     CLEAR: () => '',
     RANDOM: () => {
@@ -110,5 +142,6 @@
     document.querySelector('#clock').textContent = `Connected: ${h}:${m}:${sec}`;
   }, 1000);
 
+  loadBlogPreview();
   loadRepos();
 })();

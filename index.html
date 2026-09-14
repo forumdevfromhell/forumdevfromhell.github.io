@@ -21,11 +21,13 @@
     <section class="menu" aria-label="Main menu">
       <a href="#about"><b>(A)</b> About This Mistake</a>
       <a href="#projects"><b>(P)</b> Project Showcase</a>
+      <a href="#blog"><b>(B)</b> Latest Blog Entries</a>
       <a href="#manifesto"><b>(M)</b> Manifesto</a>
       <a href="#quotes"><b>(Q)</b> Questionable Wisdom</a>
       <a href="https://github.com/forumdevfromhell" target="_blank" rel="noreferrer"><b>(G)</b> GitHub</a>
       <button type="button" data-command="random"><b>(R)</b> Random Atrocity</button>
       <button type="button" data-command="help"><b>(H)</b> Help</button>
+      <a href="admin.html"><b>(S)</b> SysOp Console</a>
       <a href="#footer"><b>(X)</b> Exit BBS</a>
     </section>
 
@@ -47,6 +49,15 @@
       <div class="statusline" id="repoStatus">Fetching current atrocities from GitHub<span class="blink">_</span></div>
       <div class="projects" id="projectsGrid" aria-live="polite"></div>
       <noscript><p>JavaScript is disabled. The GitHub feed cannot commit crimes without it.</p></noscript>
+    </section>
+
+    <section id="blog" class="panel">
+      <div class="section-head">
+        <h2><span>(B)</span> LATEST TRANSMISSIONS</h2>
+        <a class="all-link" href="blog.html">[VIEW ALL BLOG ENTRIES]</a>
+      </div>
+      <div class="statusline" id="blogStatus">Reading latest transmissions<span class="blink">_</span></div>
+      <div class="projects" id="blogPreview" aria-live="polite"></div>
     </section>
 
     <section id="manifesto" class="panel split">
@@ -103,6 +114,7 @@
       <span>CMD-H for menu</span>
     </footer>
   </main>
+  <script src="blog-data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

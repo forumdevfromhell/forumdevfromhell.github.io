@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>TRANSMISSION // FORUM DEV FROM HELL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <main class="terminal">
+    <header class="masthead">
+      <div class="brand"><span>READ</span><span>ING</span><span>POST</span><span>BBS</span></div>
+      <div class="uptime">transmission</div>
+    </header>
+    <section class="blog-shell post-view" id="postView">
+      <a class="backlink" href="blog.html">&lt;- RETURN TO BLOG ARCHIVE</a>
+      <div class="statusline">Loading transmission<span class="blink">_</span></div>
+    </section>
+    <footer><span>forumdevfromhell.github.io</span><span>READ MODE</span><span>ESC TO ARCHIVE</span></footer>
+  </main>
+  <script src="blog-data.js"></script>
+  <script>
+    (() => {
+      const esc = s => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+      const id = new URLSearchParams(location.search).get('id');
+      const post = (window.FDH_BLOG_POSTS || []).find(p => p.id === id);
+      const view = document.querySelector('#postView');
+      if (!post) {
+        view.innerHTML += '<h1>404: TRANSMISSION LOST</h1><p>The requested blog entry does not exist.</p>';
+        return;
+      }
+      document.title = `${post.title} // FORUM DEV FROM HELL`;
+      const body = (post.body || []).map(p => `<p>${esc(p)}</p>`).join('');
+      view.innerHTML = `<a class="backlink" href="blog.html">&lt;- RETURN TO BLOG ARCHIVE</a><div class="code">[${esc((post.tags||['BLOG']).join(' / ').toUpperCase())}]</div><h1>${esc(post.title)}</h1><p class="post-date">${esc(post.date)} // ${esc(post.readTime||'')}</p><div class="post-body">${body}</div>`;
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') location.href='blog.html'; });
+    })();
+  </script>
+</body>
+</html>

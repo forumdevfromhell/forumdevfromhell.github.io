@@ -165,3 +165,39 @@ footer span:nth-child(3) { text-align: right; }
   .blink { animation: none; }
   .crt { display: none; }
 }
+
+.section-head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.section-head h2 { margin-bottom:18px; }
+.all-link { color:var(--yellow); text-decoration:none; font-size:13px; }
+.all-link:hover { background:var(--yellow); color:#000; text-shadow:none; }
+.blog-card .code { color:var(--yellow); }
+.blog-shell { padding: 24px 18px 60px; }
+.blog-shell .projects { margin-top:16px; }
+.post-view { max-width:900px; }
+.post-view .post-date { color:var(--green); }
+.post-view .post-body { color:var(--white); font-size:17px; }
+.post-view .post-body p { margin: 0 0 1.2em; }
+.post-view .post-body code { color:var(--yellow); }
+.backlink { display:inline-block; margin-bottom:18px; color:var(--green); text-decoration:none; }
+.backlink:hover { background:var(--green); color:#000; text-shadow:none; }
+
+/* SYSOP post console */
+.admin-shell { padding-bottom: 70px; }
+.admin-shell h1 { margin-bottom: 8px; }
+.admin-form { max-width: 920px; display: grid; gap: 14px; margin-top: 24px; }
+.admin-form label { display: grid; gap: 6px; color: var(--cyan); font-weight: 700; }
+.admin-form input, .admin-form textarea {
+  width: 100%; box-sizing: border-box; background: #000; color: var(--white);
+  border: 1px solid var(--blue); padding: 10px; outline: none; font: inherit;
+}
+.admin-form textarea { resize: vertical; }
+.admin-form input:focus, .admin-form textarea:focus { border-color: var(--cyan); }
+.admin-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: 6px; }
+.admin-actions button, .admin-actions a {
+  border: 0; background: none; color: var(--green); text-decoration: none; cursor: pointer; font: inherit; padding: 0;
+}
+.admin-actions button:hover, .admin-actions a:hover { background: var(--green); color: #000; text-shadow: none; }
+.admin-actions button:disabled { color: var(--dim); cursor: wait; }
+.console-status { min-height: 150px; margin-top: 24px; border: 1px solid var(--line); padding: 14px; color: var(--green); white-space: pre-wrap; }
+@media (max-width:760px) { .admin-row { grid-template-columns: 1fr; } }

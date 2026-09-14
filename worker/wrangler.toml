@@ -1,0 +1,10 @@
+name = "forumdevfromhell-publisher"
+main = "index.js"
+compatibility_date = "2026-09-14"
+
+[vars]
+ALLOWED_ORIGIN = "https://forumdevfromhell.github.io"
+GITHUB_OWNER = "forumdevfromhell"
+GITHUB_REPO = "forumdevfromhell.github.io"
+GITHUB_BRANCH = "main"
+PBKDF2_ITERATIONS = "600000"

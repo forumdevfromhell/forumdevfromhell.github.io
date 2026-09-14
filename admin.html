@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#000000">
+  <title>SYSOP POST CONSOLE // FORUM DEV FROM HELL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <main class="terminal">
+    <header class="masthead">
+      <div class="brand"><span>SYSOP</span><span>POST</span><span>CON</span><span>SOLE</span></div>
+      <div class="uptime">RESTRICTED</div>
+    </header>
+
+    <section class="panel admin-shell">
+      <a class="backlink" href="index.html">&lt; RETURN TO BBS</a>
+      <h1>POST CONSOLE</h1>
+      <p class="identity">AUTHORIZED MISCONDUCT ONLY.</p>
+
+      <form id="postForm" class="admin-form" autocomplete="off">
+        <label>TITLE
+          <input id="title" maxlength="140" required placeholder="I weaponized another compiler">
+        </label>
+        <label>SUMMARY
+          <textarea id="summary" rows="3" maxlength="300" required placeholder="Short card description"></textarea>
+        </label>
+        <div class="admin-row">
+          <label>DATE
+            <input id="date" type="date" required>
+          </label>
+          <label>READ TIME
+            <input id="readTime" maxlength="30" placeholder="4 MIN READ">
+          </label>
+        </div>
+        <label>TAGS
+          <input id="tags" maxlength="120" placeholder="TSCUM, POSTMORTEM">
+        </label>
+        <label>BODY
+          <textarea id="body" rows="16" required placeholder="Paragraph one.\n\nParagraph two.\n\nBlank lines become paragraphs."></textarea>
+        </label>
+        <label>PASSWORD
+          <input id="password" type="password" required autocomplete="current-password" placeholder="********">
+        </label>
+        <div class="admin-actions">
+          <button type="submit" id="publish">(P) PUBLISH</button>
+          <button type="button" id="clearForm">(C) CLEAR</button>
+          <a href="index.html">(X) ABORT</a>
+        </div>
+      </form>
+
+      <pre id="postStatus" class="console-status">READY.
+WAITING FOR TRANSMISSION...</pre>
+    </section>
+
+    <footer>
+      <span>forumdevfromhell.github.io</span>
+      <span>SYSOP CHANNEL</span>
+      <span>HTTPS ONLY</span>
+    </footer>
+  </main>
+  <script src="admin-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
