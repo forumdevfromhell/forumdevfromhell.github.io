@@ -1,3 +1,9 @@
-// After deploying the Cloudflare Worker, paste its URL here.
-// Example: https://forumdevfromhell-publisher.YOUR-SUBDOMAIN.workers.dev
-window.FDH_ADMIN_ENDPOINT = "https://YOUR-WORKER.workers.dev";
+// Public configuration for the direct GitHub publisher.
+// No secret belongs in this file.
+window.FDH_ADMIN = {
+  owner: "forumdevfromhell",
+  repo: "forumdevfromhell.github.io",
+  branch: "main",
+  blogPath: "blog-data.js",
+  pbkdf2Iterations: 600000
+};
