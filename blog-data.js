@@ -28,5 +28,18 @@ window.FDH_BLOG_POSTS = [
       "People see an error message and fix it. That's unimaginative.",
       "I'm going to store forum data in it."
     ]
+  },
+  {
+    "id": "typescript-data-storage",
+    "title": "Typescript Data storage?",
+    "date": "2026-09-14",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "the compiler seems to work as intended",
+    "body": [
+      "Pushed data into compiler errors on purpose, looks like this might work to store data on purpose.\nwill investigate further"
+    ]
   }
 ];
