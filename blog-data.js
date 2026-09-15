@@ -131,5 +131,21 @@ window.FDH_BLOG_POSTS = [
       "tsc --noEmit",
       "amen."
     ]
+  },
+  {
+    "id": "upcoming-project",
+    "title": "Upcoming project",
+    "date": "2026-09-15",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "9hells teaser",
+    "body": [
+      "So, to get weirder than TScum i decided to brainstorm a few ideas of how to improve my workflow and tools used to create these beautiful pieces of software.\nMy next project already has a name and structure to follow:\nNINE-HELLS or 9hells\nWhy nine you may ask?\nIts a little joke about the nine rings of hell which kind of inspired me to use nine different components this time",
+      "HTML = forum structure/database\nCSS = permissions/auth\nJavaScript = events/notifications\nPHP = sessions/login/read state\nPython = inter-component communication via exceptions\nTypeScript = account/relationship integrity\nC++ = moderation engine\nUnix/Linux = processes, pipes, signals, locks, ACLs\nDirectories = source code + storage",
+      "i intentionally gave every piece the wrong job and i am trying to see where the line is that these things just simply say \"no\"",
+      "stay tuned,\nyour forum dev from hell"
+    ]
   }
 ];
