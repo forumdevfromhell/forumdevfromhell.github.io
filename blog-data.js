@@ -147,5 +147,21 @@ window.FDH_BLOG_POSTS = [
       "i intentionally gave every piece the wrong job and i am trying to see where the line is that these things just simply say \"no\"",
       "stay tuned,\nyour forum dev from hell"
     ]
+  },
+  {
+    "id": "9hells-v0-1-in-the-works",
+    "title": "9hells v0.1 in the works",
+    "date": "2026-09-15",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "9hells"
+    ],
+    "summary": "the first circle of hell is done",
+    "body": [
+      "The first version of 9hells - aka codename \"the first circle\" is currently done",
+      "it supports basics like http server serving from a custom server and the title screen + registering. -> html seems to be useful in storing data for no apparent reason.",
+      "working on the second iteration, register/login and their storage in html files.",
+      "give or take 30 hours for v0.2 - codename following when one"
+    ]
   }
 ];
