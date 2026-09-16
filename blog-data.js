@@ -163,5 +163,20 @@ window.FDH_BLOG_POSTS = [
       "working on the second iteration, register/login and their storage in html files.",
       "give or take 30 hours for v0.2 - codename following when one"
     ]
+  },
+  {
+    "id": "working-on-9hells-v0-3",
+    "title": "working on 9hells v0.3",
+    "date": "2026-09-16",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "implementation of a frontend",
+    "body": [
+      "starting to work on 9hells v0.3",
+      "getting rid of some of the remaining normal source files and moving more of the forum into filesystem code",
+      "making sure everything still works before advancing"
+    ]
   }
 ];
