@@ -193,5 +193,22 @@ window.FDH_BLOG_POSTS = [
       "Looking like all its missing is the actual polished version and a small stress test.",
       "will update further if i encounter problems/things to be mentioned in the readme like missing perms so i can make it a 1-click installer"
     ]
+  },
+  {
+    "id": "bug-found-in-running-0-4",
+    "title": "bug found in running 0.4",
+    "date": "2026-09-18",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "minor fix will advance the scheme to 0.4.1",
+    "body": [
+      "found a bug in 0.4 of 9hells that makes /usr/bin/python3: can't open file '/proc/self/fd/3': [Errno 2] No such file or directory happen\nboot.py is creating the reconstructed runtime in a Linux memfd and then launching",
+      "/usr/bin/python3 /proc/self/fd/3",
+      "but the file descriptor is being closed/not inherited when the child Python process starts. So /proc/self/fd/3 exists for the bootstrap process and then disappears for the interpreter.",
+      "worked on a bugfix that was quite simple",
+      "The /proc/self/fd/3 bug was exactly the memfd inheritance problem the reconstructed runtime descriptor wasn't surviving exec \nv0.4.1 explicitly keeps that descriptor inheritable."
+    ]
   }
 ];
