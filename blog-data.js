@@ -178,5 +178,20 @@ window.FDH_BLOG_POSTS = [
       "getting rid of some of the remaining normal source files and moving more of the forum into filesystem code",
       "making sure everything still works before advancing"
     ]
+  },
+  {
+    "id": "9hells-0-4-in-the-works",
+    "title": "9hells 0.4 in the works",
+    "date": "2026-09-18",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "9hells"
+    ],
+    "summary": "almost there",
+    "body": [
+      "currently fixing minor issues like gfx bugs that bleep up but nothing structurally significant.",
+      "Looking like all its missing is the actual polished version and a small stress test.",
+      "will update further if i encounter problems/things to be mentioned in the readme like missing perms so i can make it a 1-click installer"
+    ]
   }
 ];
