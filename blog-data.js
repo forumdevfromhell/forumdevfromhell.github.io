@@ -210,5 +210,21 @@ window.FDH_BLOG_POSTS = [
       "worked on a bugfix that was quite simple",
       "The /proc/self/fd/3 bug was exactly the memfd inheritance problem the reconstructed runtime descriptor wasn't surviving exec \nv0.4.1 explicitly keeps that descriptor inheritable."
     ]
+  },
+  {
+    "id": "ninhells-released-next-project-coming",
+    "title": "Ninhells released, next project coming",
+    "date": "2026-09-21",
+    "readTime": "3 MIN READ",
+    "tags": [
+      "Typescript"
+    ],
+    "summary": "windows next?",
+    "body": [
+      "so i did end up releasing 9hells not that long ago, about 21h",
+      "my next conquest will lead me to windows in a vm since i do not use windows.",
+      "will i find something useful?",
+      "batch seems promising"
+    ]
   }
 ];
