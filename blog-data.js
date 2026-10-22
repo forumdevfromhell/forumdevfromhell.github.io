@@ -226,5 +226,19 @@ window.FDH_BLOG_POSTS = [
       "will i find something useful?",
       "batch seems promising"
     ]
+  },
+  {
+    "id": "borum-works",
+    "title": "Borum works",
+    "date": "2026-10-22",
+    "readTime": "1 MIN READ",
+    "tags": [
+      "batch"
+    ],
+    "summary": "windows kneels",
+    "body": [
+      "I did it",
+      "it finally works"
+    ]
   }
 ];
